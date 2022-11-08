@@ -3,6 +3,7 @@
     ><mat-nav-list>
       <mat-list-item class="sidenav-item">
         <a
+          (click)="sidenav.close()"
           matLine
           [routerLink]="['/welcome']"
           routerLinkActive="router-link-active"
@@ -11,6 +12,7 @@
       </mat-list-item>
       <mat-list-item class="sidenav-item">
         <a
+          (click)="sidenav.close()"
           matLine
           [routerLink]="['/digimons']"
           routerLinkActive="router-link-active"
