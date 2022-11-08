@@ -1,8 +1,32 @@
 <mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav mode="side">Sidenav content</mat-sidenav>
+  <mat-sidenav #sidenav class="sidenav" mode="side"
+    ><mat-nav-list>
+      <mat-list-item class="sidenav-item">
+        <a
+          matLine
+          [routerLink]="['/welcome']"
+          routerLinkActive="router-link-active"
+          >Home</a
+        >
+      </mat-list-item>
+      <mat-list-item class="sidenav-item">
+        <a
+          matLine
+          [routerLink]="['/digimons']"
+          routerLinkActive="router-link-active"
+          >Digimons</a
+        >
+      </mat-list-item>
+    </mat-nav-list></mat-sidenav
+  >
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar class="toolbar">
       <mat-nav-list class="navigation">
+        <mat-list-item class="navigation-item">
+          <button mat-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </mat-list-item>
         <mat-list-item class="navigation-item">
           <a
             matLine
@@ -21,7 +45,6 @@
         </mat-list-item>
       </mat-nav-list>
     </mat-toolbar>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-<router-outlet></router-outlet>

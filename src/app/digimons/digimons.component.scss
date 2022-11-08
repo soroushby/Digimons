@@ -2,9 +2,11 @@
   min-width: 100%;
   display: flex;
   justify-content: center;
+  background-image: url(../../assets/listbackground.png);
+  background-size: cover;
 }
 
 .grid {
   min-width: 60rem;
-  min-height: 100vh;
+  height: 100vh;
 }

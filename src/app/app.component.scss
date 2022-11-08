@@ -1,6 +1,17 @@
 // .example-spacer {
 //   flex: 1 1 auto;
 // }
+
+mat-sidenav-container,
+mat-sidenav,
+mat-sidenav-content {
+  height: 100%;
+  width: 100%;
+}
+
+.sidenav-item {
+  color: aliceblue;
+}
 .navigation {
   display: flex;
 
@@ -11,4 +22,14 @@
 
 .router-link-active {
   text-decoration: underline;
+}
+
+.toolbar {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+mat-sidenav {
+  width: 20rem;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  height: 100%;
 }
