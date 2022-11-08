@@ -9,12 +9,12 @@ import { Digimons } from './interfaces/digimons';
   styleUrls: ['./digimons.component.scss'],
 })
 export class DigimonsComponent implements OnInit {
-  allDigimons: Observable<Digimons[]> | undefined;
+  allDigimons$: Observable<Digimons[]> | undefined;
   url: any = 'https://digimon-api.vercel.app/api/digimon';
   constructor(private digimonsService: DigimonsService) {}
 
   ngOnInit(): void {
-    this.allDigimons = this.digimonsService
+    this.allDigimons$ = this.digimonsService
       .getAllDigimons(this.url)
       .subscribe((x: any) => console.log(x));
   }
