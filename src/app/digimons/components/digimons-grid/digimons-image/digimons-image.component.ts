@@ -25,11 +25,6 @@ export class DigimonsImageComponent {
     return true;
   }
 
-  buttonClicked() {
-    alert(`${this.cellValue} medals won!`);
-    console.log(this.cellValue);
-  }
-
   getValueToDisplay(params: ICellRendererParams) {
     return params.valueFormatted ? params.valueFormatted : params.value;
   }
