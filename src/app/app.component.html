@@ -2,14 +2,16 @@
   <mat-sidenav #sidenav mode="side">Sidenav content</mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <mat-nav-list>
-        <mat-list-item *ngFor="let link of links">
+      <mat-nav-list class="navigation">
+        <mat-list-item class="navigation-item">
           <a
             matLine
             [routerLink]="['/welcome']"
             routerLinkActive="router-link-active"
             >Home</a
           >
+        </mat-list-item>
+        <mat-list-item class="navigation-item">
           <a
             matLine
             [routerLink]="['/digimons']"

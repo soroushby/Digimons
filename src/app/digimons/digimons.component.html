@@ -1,4 +1,7 @@
-<!-- <ng-container *ngIf="allDigimons$ | async as digimons">
-  <app-digimons-grid [digimons]="digimons"></app-digimons-grid>
-</ng-container> -->
-<app-digimons-grid></app-digimons-grid>
+<div class="container">
+  <app-digimons-grid
+    class="grid"
+    [digimons]="allDigimons$ | async"
+  ></app-digimons-grid>
+</div>
+<!-- <app-digimons-grid></app-digimons-grid> -->

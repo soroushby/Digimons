@@ -10,6 +10,6 @@ export class DigimonsService {
   constructor(private http: HttpClient) {}
 
   getAllDigimons(url: any): any {
-    return this.http.get(url).pipe(shareReplay());
+    return this.http.get(url);
   }
 }

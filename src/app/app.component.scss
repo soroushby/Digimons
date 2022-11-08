@@ -1,6 +1,13 @@
 // .example-spacer {
 //   flex: 1 1 auto;
 // }
+.navigation {
+  display: flex;
+
+  &-item {
+    color: aliceblue;
+  }
+}
 
 .router-link-active {
   text-decoration: underline;

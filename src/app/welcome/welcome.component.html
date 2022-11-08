@@ -1,35 +1,38 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Digimons</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-  </mat-card-header>
-  <img
-    mat-card-image
-    src="../../assets/digimon.jpeg"
-    alt="Photo of a Digimon"
-  />
-  <mat-card-content>
-    <p>
-      The Digimon franchise began as a series of virtual pets created by WiZ and
-      Bandai, intended as a masculine counterpart to the more female-oriented
-      Tamagotchi pets.[2][3] It was released in June 1997[1][4] with the name
-      Digimon,[5] short for Digital Monster.[6][7] This device shows to players
-      a virtual pet composed entirely of data and designed to play and
-      fight.[1][5][8][9] In February 1998, the DigiMon fighting game, compatible
-      with Windows 95 and developed by Rapture Technologies, Inc., was
-      announced.[10] The one-shot manga C'mon Digimon, designed by Tenya Yabuno,
-      was published in the Japanese magazine V-Jump by Shueisha in 1997.[11][12]
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button
-      mat-button
-      [routerLink]="['/digimons']"
-      routerLinkActive="router-link-active"
-    >
-      List all of Digimons
-    </button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
+<div class="container">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Digimons</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="../../assets/digimon.jpeg"
+      alt="Photo of a Digimon"
+    />
+    <mat-card-content>
+      <p>
+        The Digimon franchise began as a series of virtual pets created by WiZ
+        and Bandai, intended as a masculine counterpart to the more
+        female-oriented Tamagotchi pets.[2][3] It was released in June
+        1997[1][4] with the name Digimon,[5] short for Digital Monster.[6][7]
+        This device shows to players a virtual pet composed entirely of data and
+        designed to play and fight.[1][5][8][9] In February 1998, the DigiMon
+        fighting game, compatible with Windows 95 and developed by Rapture
+        Technologies, Inc., was announced.[10] The one-shot manga C'mon Digimon,
+        designed by Tenya Yabuno, was published in the Japanese magazine V-Jump
+        by Shueisha in 1997.[11][12]
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-button
+        [routerLink]="['/digimons']"
+        routerLinkActive="router-link-active"
+      >
+        List of all Digimons
+      </button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

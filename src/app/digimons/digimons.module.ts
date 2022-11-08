@@ -8,9 +8,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
 import { MaterialModule } from '../shared/material/material.module';
 import { DigimonsGridComponent } from './components/digimons-grid/digimons-grid.component';
+import { DigimonsImageComponent } from './components/digimons-grid/digimons-image/digimons-image.component';
 
 @NgModule({
-  declarations: [DigimonsComponent, DigimonsGridComponent],
+  declarations: [DigimonsComponent, DigimonsGridComponent, DigimonsImageComponent],
   imports: [
     CommonModule,
     DigimonsRoutingModule,

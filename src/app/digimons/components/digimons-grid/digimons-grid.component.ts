@@ -6,6 +6,7 @@ import { AgGridAngular } from 'ag-grid-angular';
 import { CellClickedEvent, ColDef, GridReadyEvent } from 'ag-grid-community';
 import { Observable } from 'rxjs';
 import { Digimons } from '../../interfaces/digimons';
+import { DigimonsImageComponent } from './digimons-image/digimons-image.component';
 
 @Component({
   selector: 'app-digimons-grid',
@@ -13,11 +14,12 @@ import { Digimons } from '../../interfaces/digimons';
   styleUrls: ['./digimons-grid.component.scss'],
 })
 export class DigimonsGridComponent implements OnInit {
-  @Input() digimons: Observable<Digimons[]> | undefined;
+  @Input() digimons: Digimons[] | null = [];
+
   public columnDefs: ColDef[] = [
-    { field: 'Name' },
-    { field: 'Image' },
-    { field: 'Level' },
+    { field: 'name' },
+    { field: 'level' },
+    { field: 'img', cellRenderer: DigimonsImageComponent },
   ];
 
   public defaultColDef: ColDef = {
@@ -31,12 +33,6 @@ export class DigimonsGridComponent implements OnInit {
   @ViewChild(AgGridAngular) agGrid!: AgGridAngular;
 
   constructor(private http: HttpClient) {}
-
-  onGridReady(params: GridReadyEvent) {
-    this.rowData$ = this.http.get<any[]>(
-      'https://www.ag-grid.com/example-assets/row-data.json'
-    );
-  }
 
   // Example of consuming Grid Event
   onCellClicked(e: CellClickedEvent): void {
