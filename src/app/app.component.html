@@ -1,8 +1,9 @@
 <mat-sidenav-container class="example-container">
-  <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+  <mat-sidenav #sidenav mode="side">Sidenav content</mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar>
+    <mat-toolbar color="primary">
       <button
+        (click)="sidenav.toggle()"
         mat-icon-button
         class="example-icon"
         aria-label="Example icon-button with menu icon"
@@ -12,6 +13,8 @@
       <span>My App</span>
       <span class="example-spacer"></span>
       <button
+        [routerLink]="['/digimons']"
+        routerLinkActive="router-link-active"
         mat-icon-button
         class="example-icon favorite-icon"
         aria-label="Example icon-button with heart icon"
