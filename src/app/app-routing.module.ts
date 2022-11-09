@@ -4,6 +4,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { WelcomeComponent } from './welcome/welcome.component';
 
 const routes: Routes = [
+  { path: '', component: WelcomeComponent },
   { path: 'welcome', component: WelcomeComponent },
 
   {
